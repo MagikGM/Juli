@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Para ti ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Importación de fuentes elegantes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@300;400;600&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Canvas para efectos de fondo -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Canvas para confeti -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Pantalla de carga -->
+    <div id="loader">
+      <div class="heart-loader"></div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="container">
+      <!-- Sección 1: Portada / Hero -->
+      <section class="hero reveal-element visible" id="home">
+        <div class="hero-card">
+          <div style="font-size: 3rem; margin-bottom: 10px">✨</div>
+          <h1 id="juliana" class="title-hero">Hola, Juli</h1>
+          <p class="subtitle">Tengo algo importante que decirte...</p>
+          <div style="margin-top: 20px">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="var(--primary-color)"
+              style="animation: heartBeat 2s infinite"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <span class="scroll-text">Desliza</span>
+          <span>⌄</span>
+        </div>
+      </section>
+
+      <!-- Sección 1.5: Fotos Nosotros (NUEVA) -->
+      <section id="us-photos" class="reveal-element">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h2 class="section-title">Nosotros</h2>
+        </div>
+        <div class="photos-wrapper">
+          <div class="photo-card rotate-left">
+            <!-- REEMPLAZA 'tu-foto.jpg' CON TU IMAGEN -->
+            <img src="imagenes/yo.jpg" alt="Yo" />
+          </div>
+          <div class="photo-divider">❤️</div>
+          <div class="photo-card rotate-right">
+            <!-- REEMPLAZA 'su-foto.jpg' CON LA IMAGEN DE ELLA -->
+            <img src="imagenes/ella.jpg" alt="Ella" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 2: Mensajes / Razones -->
+      <section id="messages" class="reveal-element">
+        <div style="text-align: center">
+          <h2 class="section-title">¿Por qué tú?</h2>
+        </div>
+        <div class="message-grid">
+          <div class="card">
+            <span class="card-icon">🌟</span>
+            <h3>Eres especial</h3>
+            <p>
+              Se que no llevamos tanto, pero desde que estás, todo tiene otro color… y me gusta mucho cómo se siente eso.
+            </p>
+          </div>
+          <div class="card">
+            <span class="card-icon">👁</span>
+            <h3>Tus ojitos</h3>
+            <p>
+              No sé si ya te lo dije, pero tus ojitos me encantan… tienen algo que me dejan lokito cuando te veo :3
+            </p>
+          </div>
+          <div class="card">
+            <span class="card-icon">❤️‍🔥</span>
+            <h3>Simplemente tú y yo</h3>
+            <p>
+              Contigo me siento cómodo, como si pudiera ser yo sin pensar de más… y me encanta, ademas que me gusta pasar tiempo contigo.
+            </p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🚀</span>
+            <h3>Todo lo que podemos ser</h3>
+            <p>
+              Me ilusiona pensar que esto que estamos empezando puede crecer a algo muy especial :3
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 3: Promesas / Detalles -->
+      <section id="promises" class="reveal-element">
+        <div style="text-align: center">
+          <h2 class="section-title">Mis promesas para ti</h2>
+        </div>
+        <ul class="promises-list">
+          <li>
+            <span>🤝</span>
+            <p>Estar contigo en las buenas, en las malas y en las peores.</p>
+          </li>
+          <li>
+            <span>😄</span>
+            <p>
+              Prometo hacerte reír siempre que pueda… aunque mis chistes estén malos, malisimos, asi SUPER RANCIOS (berenjena 🍆)
+            </p>
+          </li>
+          <li>
+            <span>👂</span>
+            <p>Prometo escucharte cuando necesites hablar, desahogarte o solo con que esté ahí :3</p>
+          </li>
+          <li>
+            <span>✨</span>
+            <p>Prometo valorar cada momento que pase contigo, por simple que sea.</p>
+          </li>
+          <li>
+            <span>❤️</span>
+            <p>Recordarte todos los días lo increíble que eres.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Sección 4: La Propuesta -->
+      <section id="proposal" class="proposal-area">
+        <div style="font-size: 3.5rem; margin-bottom: 20px">💍</div>
+        <h2 class="proposal-title">¿Quieres ser mi novia?</h2>
+        <p style="margin-bottom: 30px; font-size: 1.1rem">
+          No imagino a nadie más con quien quiera compartir mis días mas que contigo.
+        </p>
+
+        <div class="buttons-container">
+          <button id="btn-yes" class="btn btn-yes">¡Sí, quiero! ❤️‍🔥</button>
+          <button id="btn-no" class="btn btn-no">No, gracias</button>
+        </div>
+      </section>
+
+      <footer
+        style="
+          text-align: center;
+          padding: 40px 0;
+          color: rgba(89, 13, 34, 0.5);
+          font-size: 0.9rem;
+        "
+      >
+        Hecho con todo mi ❤️ para ti.
+      </footer>
+    </div>
+
+    <!-- Modal de Éxito -->
+    <div id="success-modal" class="overlay">
+      <div class="modal-content">
+        <div class="modal-icon">💗🎉</div>
+        <h2
+          style="
+            font-family: var(--font-hand);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+          "
+        >
+          ¡Yo sabía que dirías que sí, o no? JSKHADASKJ
+        </h2>
+        <p style="margin-top: 20px; font-size: 1.1rem">
+          Me haces muy feliz tlj. Te aprecio mucho. ❤️
+        </p>
+        <p style="margin-top: 10px; font-weight: bold">
+          Ahora si voltea 👅
+        </p>
+        <button
+          onclick="closeModal()"
+          style="
+            margin-top: 10px;
+            padding: 10px 30px;
+            border-radius: 20px;
+            border: none;
+            background: var(--secondary-color);
+            color: white;
+            cursor: pointer;
+          "
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT: Lógica, Animaciones y Magia -->
+    <script src="script.js"></script>
+  </body>
+</html>
