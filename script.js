@@ -77,15 +77,8 @@ class HeartParticle {
         ctx.translate(this.x, this.y);
         ctx.fillStyle = this.color;
 
-        ctx.beginPath();
-        const s = this.size / 10;
-        ctx.scale(s, s);
-
-        ctx.moveTo(0, 0);
-        ctx.bezierCurveTo(-10, -10, -15, 5, 0, 15);
-        ctx.bezierCurveTo(15, 5, 10, -10, 0, 0);
-
-        ctx.fill();
+        ctx.font = `${this.size * 2}px Arial`;
+        ctx.fillText("🖕", 0, 0);
         ctx.restore();
     }
 }
@@ -149,17 +142,17 @@ let noClickCount = 0;
 
 // Frases para intentar convencerla
 const phrases = [
-    "No",
-    "¿Estás segura?",
-    "¿De verdad?",
-    "¡Piénsalo bien!",
-    "Mira el otro botón...",
-    "¡Es muy bonito!",
-    "¡Por favor!",
-    "¡Di que sí!",
-    "¡No te arrepentirás!",
-    "¡Anda, sí!",
-    "¡Última oportunidad!"
+    "🖕",
+    "🖕",
+    "🖕",
+    "🖕",
+    "🖕",
+    "🖕",
+    "🖕",
+    "🖕",
+    "🖕",
+    "🖕",
+    "🖕"
 ];
 
 function growYesButton() {
@@ -183,7 +176,7 @@ btnNo.addEventListener('click', growYesButton);
 
 function spawnHeart(x, y) {
     const heart = document.createElement('div');
-    heart.innerText = '❤️';
+    heart.innerText = '🖕';
     heart.style.position = 'fixed';
     heart.style.left = x + 'px';
     heart.style.top = y + 'px';
@@ -276,7 +269,8 @@ function renderConfetti() {
             cCtx.translate(c.x, c.y);
             cCtx.rotate(c.rotation * Math.PI / 180);
             cCtx.fillStyle = c.color;
-            cCtx.fillRect(-c.w / 2, -c.h / 2, c.w, c.h);
+            cCtx.font = `${c.w * 2}px Arial`;
+            cCtx.fillText("🖕", -c.w / 2, -c.h / 2);
             cCtx.restore();
         }
     });
